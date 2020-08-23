@@ -1,4 +1,7 @@
 export default class UFOAlert extends HTMLElement {
+    static get observedAttributes() {
+        ['msg', 'type', 'dark']
+    }
     constructor() {
         super();
         this.attachShadow({
@@ -11,8 +14,8 @@ export default class UFOAlert extends HTMLElement {
         states.forEach(s => {
             this.classList.contains(s) ? this.classList.remove(s) : null
         })
-        this.setAttribute('data-msg', '')
-        this.setAttribute('data-type', '')
+        this.setAttribute('msg', '')
+        this.setAttribute('type', '')
     }
 
     darkMode() {
@@ -23,8 +26,8 @@ export default class UFOAlert extends HTMLElement {
         const {
             shadowRoot
         } = this
-        const body = this.getAttribute('data-msg');
-        const type = this.getAttribute('data-type');
+        const body = this.getAttribute('msg');
+        const type = this.getAttribute('type');
         shadowRoot.innerHTML = `
             <style>
             span {
@@ -59,11 +62,11 @@ export default class UFOAlert extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (this.darkMode() == false) {
-            name == 'data-msg' ? this.shadowRoot.innerHTML = newValue : null;
-            name == 'data-type' ? this.classList.remove(oldValue).add(newValue) : null;
+            name == 'msg' ? this.shadowRoot.innerHTML = newValue : null;
+            name == 'type' ? this.classList.remove(oldValue).add(newValue) : null;
         } else {
-            name == 'data-msg' ? this.shadowRoot.innerHTML = newValue : null;
-            name == 'data-type' ? this.classList.remove(oldValue + '--dark').add(newValue + '--dark') : null;
+            name == 'msg' ? this.shadowRoot.innerHTML = newValue : null;
+            name == 'type' ? this.classList.remove(oldValue + '--dark').add(newValue + '--dark') : null;
         }
     }
 }

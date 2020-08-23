@@ -14,17 +14,17 @@ Elements can have a different attributes that decide how they look or act. Flags
 
 **Purpose:** provide basic feedback to users, ex: success/error messages.
 
-**Usage:** update the ```data-msg``` with the message to display and the ```data-type``` with the alert type.
+**Usage:** update the ```msg``` with the message to display and the ```type``` with the alert type.
 
 ```
 const alert = document.getElementByTagName('ufo-alert')
-alert.setAttribute('data-msg', 'Success!')
-alert.setAttribute('data-type', 'success')
+alert.setAttribute('msg', 'Success!')
+alert.setAttribute('type', 'success')
 ```
 
 |Attribute | Options |
 |----------|---------|
-|data-msg  |The message you would like the alert to display
-|data-type |one of [success, error, warning, system]
+|msg  |The message you would like the alert to display
+|type |one of [success, error, warning, system]
 |flags | dark
 

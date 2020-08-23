@@ -30,4 +30,58 @@ ufo-alert {
         transition: all .3s ease-in-out;
     }
 
+    &.error {
+        display: block;
+        background: $red-opacity;
+        color: darken($red, 10%);
+        border: 1px solid $red-light;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($red-opacity, 2%);
+        transition: all .3s ease-in-out;
+    }
+
+    &.error--dark {
+        display: block;
+        background: $red;
+        color: $white;
+        border: 1px solid $red-dark;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($red, 10%);
+        transition: all .3s ease-in-out;
+    }
+
+    &.warning {
+        display: block;
+        background: $yellow-opacity;
+        color: darken($yellow, 10%);
+        border: 1px solid $yellow-light;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($yellow-opacity, 2%);
+        transition: all .3s ease-in-out;
+    }
+
+    &.warning--dark {
+        display: block;
+        background: $yellow;
+        color: $white;
+        border: 1px solid $yellow-dark;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($yellow, 10%);
+        transition: all .3s ease-in-out;
+    }
+
+    &.system {
+        display: block;
+        background: $blue-opacity;
+        color: darken($blue, 10%);
+        border: 1px solid $blue-light;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($blue-opacity, 2%);
+        transition: all .3s ease-in-out;
+    }
+
+    &.system--dark {
+        display: block;
+        background: $blue;
+        color: $white;
+        border: 1px solid $blue-dark;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($blue, 10%);
+        transition: all .3s ease-in-out;
+    }
+
 }

@@ -3,6 +3,23 @@ $green:#27ae60;
 $green-light: lighten($green, 25%);
 $green-dark: darken($green, 25%);
 $green-opacity: rgba(39, 174, 96, .25);
+
+$red:#e74c3c;
+$red-light: lighten($red, 25%);
+$red-dark: darken($red, 25%);
+$red-opacity: rgba(231, 76, 60, .25);
+
+$yellow:#f1c40f;
+$yellow-light: lighten($yellow, 25%);
+$yellow-dark: darken($yellow, 25%);
+$yellow-opacity: rgba(241, 196, 15, .25);
+
+$blue:#2980b9;
+$blue-light: lighten($blue, 25%);
+$blue-dark: darken($blue, 25%);
+$blue-opacity: rgba(41, 128, 185, .25);
+
+
 $white:#fff;
 
 /*------------------- Border Radius -----------------------*/
