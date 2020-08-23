@@ -30,6 +30,7 @@ export default class UFOButton extends HTMLElement {
         } else {
             this.classList.add(type + '--dark')
         }
+        this.setAttribute('tabindex', 0)
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
