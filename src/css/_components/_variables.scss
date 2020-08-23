@@ -11,7 +11,7 @@ $red-opacity: rgba(231, 76, 60, .25);
 
 $yellow:#f1c40f;
 $yellow-light: lighten($yellow, 25%);
-$yellow-dark: darken($yellow, 25%);
+$yellow-dark: darken($yellow, 15%);
 $yellow-opacity: rgba(241, 196, 15, .25);
 
 $blue:#2980b9;
@@ -19,11 +19,19 @@ $blue-light: lighten($blue, 25%);
 $blue-dark: darken($blue, 25%);
 $blue-opacity: rgba(41, 128, 185, .25);
 
+$default:#2d3436;
+$default-light: lighten($default, 25%);
+$default-dark: darken($default, 25%);
+$default-opacity: rgba(45, 52, 54, .25);
+
 
 $white:#fff;
 
 /*------------------- Border Radius -----------------------*/
 $border-radius-normal:10px;
+$border-radius-small:5px;
 
 /*------------------- Shadows ---------------------------*/
 $shadow-subtle-light-bg: 3px 5px 15px rgba(0, 0, 0, .25);
+$shadow-button: 3px 5px 10px rgba(0, 0, 0, .2);
+$shadow-button-hover: 8px 15px 25px rgba(0, 0, 0, .3);

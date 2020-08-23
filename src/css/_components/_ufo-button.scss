@@ -1,0 +1,109 @@
+ufo-button {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14pt;
+    text-align: center;
+
+    &.ufo-button {
+        border-radius: $border-radius-small;
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin: 20px 0;
+        box-shadow: $shadow-button;
+        min-width: 150px;
+        font-weight: 600;
+    }
+
+    &[small] {
+        min-width: 100px;
+        font-size: 10pt;
+        padding: .5rem 1rem;
+        font-weight: 600;
+    }
+
+    &[large] {
+        font-size: 18pt;
+        padding: 1.5rem 2.75rem;
+        font-weight: 800;
+    }
+
+    &.primary {
+        border: 1px solid $blue;
+        background: $blue;
+        color: $white;
+        transition: all .2s ease-in-out;
+        box-shadow: $shadow-button, inset 0 -10px 20px $blue-dark;
+
+        &:hover {
+            border: 1px solid $blue-dark;
+            transform: scale(1.01);
+            box-shadow: $shadow-button-hover, inset 0 -100px 0 $blue-dark;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+    &.danger {
+        border: 1px solid $red;
+        background: $red;
+        color: $white;
+        transition: all .2s ease-in-out;
+        box-shadow: $shadow-button, inset 0 -10px 20px $red-dark;
+
+        &:hover {
+            border: 1px solid $red-dark;
+            transform: scale(1.01);
+            box-shadow: $shadow-button-hover, inset 0 -100px 0 $red-dark;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+    &.confirm {
+        border: 1px solid $green;
+        background: $green;
+        color: $white;
+        transition: all .2s ease-in-out;
+        box-shadow: $shadow-button, inset 0 -10px 20px $green-dark;
+
+        &:hover {
+            border: 1px solid $green-dark;
+            transform: scale(1.01);
+            box-shadow: $shadow-button-hover, inset 0 -100px 0 $green-dark;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+    &.warning {
+        border: 1px solid $yellow;
+        background: $yellow;
+        color: $white;
+        transition: all .2s ease-in-out;
+        box-shadow: $shadow-button, inset 0 -10px 20px $yellow-dark;
+
+        &:hover {
+            border: 1px solid $yellow-dark;
+            transform: scale(1.01);
+            box-shadow: $shadow-button-hover, inset 0 -100px 0 $yellow-dark;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+    &.default {
+        border: 1px solid $default;
+        background: $white;
+        color: $default;
+        transition: all .2s ease-in-out;
+        box-shadow: $shadow-button, inset 0 0 0 $default-dark;
+
+        &:hover {
+            border: 1px solid $default-dark;
+            background: $default;
+            transform: scale(1.01);
+            box-shadow: $shadow-button-hover, inset 0 -100px 0 $default-dark;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
