@@ -8,7 +8,7 @@ Elements can have a different attributes that decide how they look or act. Flags
 
 ### List of Elements
 
-- [ufo-alert](ufo-alert])
+- ufo-alert
 
 ## ufo-alert
 
