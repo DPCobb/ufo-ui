@@ -52,4 +52,9 @@ ufo-card {
             text-align: center;
         }
     }
+
+    *:active,
+    *:focus {
+        outline: none;
+    }
 }
