@@ -1,0 +1,33 @@
+ufo-alert {
+    font-size: 14pt;
+    display: none;
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+
+    &.ufo-alert {
+        box-sizing: border-box;
+        width: 96%;
+        padding: 1.5rem 1rem;
+        margin: 2rem auto;
+        border-radius: $border-radius-normal;
+    }
+
+    &.success {
+        display: block;
+        background: $green-opacity;
+        color: darken($green, 10%);
+        border: 1px solid $green-light;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($green-opacity, 2%);
+        transition: all .3s ease-in-out;
+    }
+
+    &.success--dark {
+        display: block;
+        background: $green;
+        color: $white;
+        border: 1px solid $green-dark;
+        box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($green, 10%);
+        transition: all .3s ease-in-out;
+    }
+
+}

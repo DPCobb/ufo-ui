@@ -1,0 +1,30 @@
+version: '2.4'
+
+services:
+  db:
+    image: 'mariadb:latest'
+    volumes:
+      - ${HOST}/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=dev_root
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_PASSWORD=dev_root
+    ports:
+      - 3306
+    restart: always
+  adminer:
+    image: 'adminer'
+    restart: always
+    ports:
+      - 8080
+    links:
+      - db
+  apache: 
+    image: 'php-pdo:latest'
+    volumes:
+      - ${HOST}/src:/var/www/html
+    links:
+      - db
+    ports:
+      - 80
