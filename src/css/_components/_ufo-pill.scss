@@ -16,26 +16,31 @@ ufo-pill {
     &.primary {
         background: $pill-primary;
         color: $white;
+        box-shadow: $shadow-pill, inset 0 -10px 20px darken($pill-primary, 25%);
     }
 
     &.warning {
         background: $pill-warning;
         color: $white;
+        box-shadow: $shadow-pill, inset 0 -10px 20px darken($pill-warning, 25%);
     }
 
     &.danger {
         background: $pill-danger;
         color: $white;
+        box-shadow: $shadow-pill, inset 0 -10px 20px darken($pill-danger, 25%);
     }
 
     &.success {
         background: $pill-success;
         color: $white;
+        box-shadow: $shadow-pill, inset 0 -10px 20px darken($pill-success, 25%);
     }
 
     &.default {
         background: $pill-default;
         color: $white;
+        box-shadow: $shadow-pill, inset 0 -10px 20px darken($pill-default, 25%);
     }
 
     &[large] {

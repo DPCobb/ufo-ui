@@ -46,7 +46,7 @@ Animations can be added to any element by add the animation as a flag, like ```r
 |----------|---------|
 |text  |The button text
 |type |one of [primary, danger, warning, confirm, default]
-|flags|one of [small, large]
+|flags|one of [small, large], rounded
 
 ## ufo-pill
 

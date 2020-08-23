@@ -140,4 +140,8 @@ ufo-button {
     &:focus {
         outline: none;
     }
+
+    &[rounded] {
+        border-radius: $border-round;
+    }
 }
