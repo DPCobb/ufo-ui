@@ -1,4 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
 @import '_components/_variables.scss';
+@import '_components/_animations.scss';
 @import '_components/_ufo-alert.scss';
 @import '_components/_ufo-button.scss';
+@import '_components/_ufo-pill.scss';
+
+*[pulse] {
+    animation: ufo-pulse .75s ease-in-out;
+}
+
+*[pop] {
+    animation: ufo-pop 1.2s ease-in;
+}
+
+*[fade-in] {
+    opacity: 0;
+    animation: ufo-fade-in 1s ease-in forwards;
+}
+
+*[fade-out] {
+    opacity: 1;
+    animation: ufo-fade-out 1s ease-in forwards;
+}

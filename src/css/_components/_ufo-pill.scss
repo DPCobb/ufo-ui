@@ -1,0 +1,46 @@
+ufo-pill {
+    font-size: 12pt;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    border-radius: $pill-radius;
+    display: inline-block;
+    min-width: 50px;
+
+    &.ufo-pill {
+        padding: 5px 10px;
+        margin: 10px auto;
+        box-sizing: border-box;
+        box-shadow: $shadow-pill;
+    }
+
+    &.primary {
+        background: $pill-primary;
+        color: $white;
+    }
+
+    &.warning {
+        background: $pill-warning;
+        color: $white;
+    }
+
+    &.danger {
+        background: $pill-danger;
+        color: $white;
+    }
+
+    &.success {
+        background: $pill-success;
+        color: $white;
+    }
+
+    &.default {
+        background: $pill-default;
+        color: $white;
+    }
+
+    &[large] {
+        min-width: 100px;
+        padding: 10px 20px;
+        font-size: 14pt;
+    }
+}
