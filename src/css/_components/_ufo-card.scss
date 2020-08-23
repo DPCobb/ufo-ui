@@ -1,0 +1,55 @@
+ufo-card {
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+    font-family: 'Rubik', sans-serif;
+
+    &.ufo-card {
+        padding: 0;
+        margin: 20px 5px;
+        box-shadow: $shadow-card;
+        background: $card-background;
+        border-radius: $card-radius;
+    }
+
+    ufo-card-title {
+        color: $card-title;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+
+        &::after {
+            display: table;
+            content: ' ';
+            width: 100%;
+            margin: 0 auto;
+            border-bottom: $card-title-border;
+        }
+
+        &[no-border] {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    ufo-card-body {
+        color: $card-body;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 14pt;
+    }
+
+    ufo-card-footer {
+        color: $card-footer;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 12pt;
+
+        &[center] {
+            text-align: center;
+        }
+    }
+}

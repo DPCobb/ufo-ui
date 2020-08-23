@@ -1,6 +1,6 @@
 export default class UFOPill extends HTMLElement {
     static get observedAttributes() {
-        ['text', 'type', 'dark']
+        ['text', 'type']
     }
     constructor() {
         super();

@@ -21,6 +21,8 @@ Animations can be added to any element by add the animation as a flag, like ```r
 
 - ufo-alert
 - ufo-button
+- ufo-pill
+- ufo-card
 
 ## ufo-alert
 
@@ -46,3 +48,39 @@ Animations can be added to any element by add the animation as a flag, like ```r
 |type |one of [primary, danger, warning, confirm, default]
 |flags|one of [small, large]
 
+## ufo-pill
+
+**Purpose:** basic pill, size can be changed with flag  ```large```
+
+**Usage:** set the pill text with ```text``` and the type with ```type```
+
+|Attribute | Options |
+|----------|---------|
+|text  |The button text
+|type |one of [primary, danger, warning, success, default]
+|flags|large
+
+## ufo-card
+
+**Purpose:** creates a basic card.
+
+**Usage:** creates the container for card parts.
+
+### ufo-card-title
+
+|Attribute | Options |
+|----------|---------|
+|text  |The title text
+|flags|no-border
+
+### ufo-card-body
+
+Contains the body of the card
+
+### ufo-card-footer
+
+Contains the footer HTML
+
+|Attribute | Options |
+|----------|---------|
+|flags|center
