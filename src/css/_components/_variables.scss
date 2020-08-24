@@ -39,9 +39,11 @@ $pill-radius:9999px;
 /*---------------------- Cards ---------------------------*/
 
 $card-background:#fff;
+$card-background-dark:#2d3436;
 $card-radius:3px;
 $shadow-card: 2px 3px 5px rgba(0, 0, 0, .25);
-$card-title:#2d3436;
+$card-text:#2d3436;
+$card-text-dark:#fff;
 $card-body:#2d3436;
 $card-footer:lighten(#2d3436, 30%);
 $card-title-border:1px solid rgba(45, 52, 54, .3);

@@ -66,6 +66,10 @@ Animations can be added to any element by add the animation as a flag, like ```r
 
 **Usage:** creates the container for card parts.
 
+|Attribute | Options |
+|----------|---------|
+|img  |card image URL
+
 ### ufo-card-title
 
 |Attribute | Options |

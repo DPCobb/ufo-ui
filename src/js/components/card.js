@@ -104,7 +104,22 @@ export default class UFOCard extends HTMLElement {
         const {
             shadowRoot
         } = this
+        let imgDom, img = null;
+        if (this.getAttribute('img')) {
+            img = this.getAttribute('img')
+            imgDom = `
+            <style>
+            .img {
+                height: 300px;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+            </style>
+            <div class="img" style='background-image:url("${img}")'></div>`
+        }
         shadowRoot.innerHTML = `
+        ${img !== null ? imgDom :'' }
         <slot></slot>
         <slot></slot>
         <slot></slot>
