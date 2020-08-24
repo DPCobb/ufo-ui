@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ufo-Ui Drawer</title>
+    <link rel="stylesheet" href="/src/css/ufo-ui.min.css">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <script type="module" src="/src/js/ufo-ui.js"></script>
+</head>
+
+<body>
+    <a href="/src/index.html">Home</a>
+    <ufo-drawer></ufo-drawer>
+    <ufo-button text="Toggle Drawer" type="primary"></ufo-button>
+    <script>
+        const button = document.querySelector('ufo-button')
+        const drawer = document.querySelector('ufo-drawer')
+        button.addEventListener('click', () => {
+            drawer.toggle()
+        })
+    </script>
+</body>
+
+</html>

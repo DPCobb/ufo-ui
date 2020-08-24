@@ -33,8 +33,7 @@ ufo-button {
         transition: all .2s ease-in-out;
         box-shadow: $shadow-button, inset 0 -10px 20px $blue-dark;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid $blue-dark;
             transform: scale(1.01);
             box-shadow: $shadow-button-hover, inset 0 -100px 0 $blue-dark;
@@ -55,8 +54,7 @@ ufo-button {
         transition: all .2s ease-in-out;
         box-shadow: $shadow-button, inset 0 -10px 20px $red-dark;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid $red-dark;
             transform: scale(1.01);
             box-shadow: $shadow-button-hover, inset 0 -100px 0 $red-dark;
@@ -77,8 +75,7 @@ ufo-button {
         transition: all .2s ease-in-out;
         box-shadow: $shadow-button, inset 0 -10px 20px $green-dark;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid $green-dark;
             transform: scale(1.01);
             box-shadow: $shadow-button-hover, inset 0 -100px 0 $green-dark;
@@ -99,8 +96,7 @@ ufo-button {
         transition: all .2s ease-in-out;
         box-shadow: $shadow-button, inset 0 -10px 20px $yellow-dark;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid $yellow-dark;
             transform: scale(1.01);
             box-shadow: $shadow-button-hover, inset 0 -100px 0 $yellow-dark;
@@ -121,8 +117,7 @@ ufo-button {
         transition: all .2s ease-in-out;
         box-shadow: $shadow-button, inset 0 0 0 $default-dark;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid $default-dark;
             background: $default;
             transform: scale(1.01);

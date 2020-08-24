@@ -46,3 +46,27 @@
         opacity: 0;
     }
 }
+
+@keyframes drawerClose {
+    from {
+        opacity: 1;
+        width: 25vw;
+    }
+
+    to {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+@keyframes drawerOpen {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 25vw;
+    }
+}
