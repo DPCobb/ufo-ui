@@ -88,3 +88,11 @@ Contains the footer HTML
 |Attribute | Options |
 |----------|---------|
 |flags|center
+
+## ufo-drawer
+
+**Purpose:** side menu opening from the right side.
+
+|Methods | Description |
+|----------|---------|
+|toggle  |Opens/Closes the drawer
