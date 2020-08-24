@@ -1,4 +1,5 @@
 # UfoUi
+###### Version: 0.1.0
 
 A collection of reusable web elements for simplifying web development.
 
@@ -10,14 +11,12 @@ Elements can have a different attributes that decide how they look or act. Flags
 
 Animations can be added to any element by add the animation as a flag, like ```required```.
 
-### List of Animations
-
 - pulse
 - pop
 - fade-in
 - fade-out
 
-### List of Elements
+## Elements
 
 - ufo-alert
 - ufo-button
@@ -69,6 +68,7 @@ Animations can be added to any element by add the animation as a flag, like ```r
 |Attribute | Options |
 |----------|---------|
 |img  |card image URL
+|flags |dark
 
 ### ufo-card-title
 
