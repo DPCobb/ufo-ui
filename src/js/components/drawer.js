@@ -14,7 +14,6 @@ export default class UFODrawer extends HTMLElement {
         if (this.open == false) {
             this.open = true
             this.classList.toggle('open')
-            this.classList.toggle('close')
         } else {
             this.open == false
             this.classList.toggle('open')
@@ -35,7 +34,6 @@ export default class UFODrawer extends HTMLElement {
             
         `
         this.classList.add('ufo-drawer')
-        this.classList.add('close')
         this.setAttribute('tabindex', 0)
     }
 

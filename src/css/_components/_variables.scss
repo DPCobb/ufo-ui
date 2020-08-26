@@ -24,7 +24,8 @@ $default-light: lighten($default, 25%);
 $default-dark: darken($default, 25%);
 $default-opacity: rgba(45, 52, 54, .25);
 
-
+$icon-color:#2d3436;
+$tip-bg: #2d3436;
 $white:#fff;
 
 /*------------------ Pill Variables ----------------------*/
@@ -64,3 +65,6 @@ $shadow-subtle-light-bg: 3px 5px 15px rgba(0, 0, 0, .25);
 $shadow-button: 3px 5px 10px rgba(0, 0, 0, .2);
 $shadow-button-hover: 8px 15px 25px rgba(0, 0, 0, .3);
 $shadow-button-click: 2px 3px 5px rgba(0, 0, 0, .7);
+
+/*----------------------- Tooltip ----------------------*/
+$underline:#6c5ce7;

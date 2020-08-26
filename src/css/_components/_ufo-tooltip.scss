@@ -1,0 +1,75 @@
+ufo-tooltip {
+    position: relative;
+    width: auto;
+    display: inline-block;
+
+    &:hover {
+        cursor: help;
+    }
+
+    &:hover::after {
+        content: attr(tip);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background: $tip-bg;
+        min-width: 250px;
+        padding: 5px;
+        height: auto;
+        color: white;
+        display: block;
+        z-index: 1000;
+        border-radius: 5px;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, .4);
+    }
+
+    &[bottom]:hover::after {
+        content: attr(tip);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: $tip-bg;
+        min-width: 250px;
+        padding: 5px;
+        height: 100%;
+        color: white;
+        display: block;
+        z-index: 1000;
+        border-radius: 5px;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, .4);
+    }
+
+    &:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 1001;
+        margin-left: -5px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: $tip-bg transparent transparent transparent;
+    }
+
+    &[bottom]:hover::before {
+        content: "";
+        position: absolute;
+        top: 65%;
+        left: 20px;
+        z-index: 1001;
+        margin-left: -5px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent $tip-bg transparent;
+    }
+
+    &>*::after {
+        content: "";
+        display: table;
+        height: 3px;
+        width: 98%;
+        background: $underline;
+        margin: 0 auto;
+        opacity: .5;
+    }
+}

@@ -1,0 +1,13 @@
+ufo-icon {
+    width: 16px;
+    height: 16px;
+    fill: $icon-color;
+    padding: 2px;
+    display: block;
+    transition: all .3s ease-out;
+
+    &[icon-btn]:hover {
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}

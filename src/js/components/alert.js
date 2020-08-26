@@ -30,14 +30,17 @@ export default class UFOAlert extends HTMLElement {
         const type = this.getAttribute('type');
         shadowRoot.innerHTML = `
             <style>
-            span {
-                font-size: 1rem;
+            .ufo-icon {
                 position: absolute;
-                top: 20px;
+                top: 25px;
                 right: 20px;
+                padding: 2px;
+                display: block;
+                transition: all .3s ease-out;
             }
-            span:hover{
-                cursor:pointer;
+            [icon-btn]:hover {
+                cursor: pointer;
+                transform: scale(1.3);
             }
             p {
                 padding: 0;
@@ -45,7 +48,7 @@ export default class UFOAlert extends HTMLElement {
             }
             </style>
             <p>${body}</p>
-            <span class='close'>X</span>
+            <ufo-icon name="close" icon-btn></ufo-icon>
         `
 
         this.classList.add('ufo-alert')
@@ -57,7 +60,7 @@ export default class UFOAlert extends HTMLElement {
         } else {
             this.classList.add(type + '--dark')
         }
-        shadowRoot.querySelector('.close').addEventListener('click', this.closeAlert.bind(this))
+        shadowRoot.querySelector('ufo-icon').addEventListener('click', this.closeAlert.bind(this))
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
