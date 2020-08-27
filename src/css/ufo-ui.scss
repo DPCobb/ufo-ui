@@ -3,11 +3,13 @@
 @import '_components/_animations.scss';
 @import '_components/_ufo-icon.scss';
 @import '_components/_ufo-tooltip.scss';
+@import '_components/_ufo-grid-equals.scss';
 @import '_components/_ufo-alert.scss';
 @import '_components/_ufo-button.scss';
 @import '_components/_ufo-pill.scss';
 @import '_components/_ufo-card.scss';
 @import '_components/_ufo-drawer.scss';
+@import '_components/_ufo-tag.scss';
 
 *[pulse] {
     animation: ufo-pulse .75s ease-in-out;

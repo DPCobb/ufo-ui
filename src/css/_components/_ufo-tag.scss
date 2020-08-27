@@ -1,0 +1,30 @@
+ufo-tag {
+    display: inline-block;
+    margin: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: $tag-color;
+    padding: 4px 6px;
+    background: $tag-default;
+    border-radius: 3px;
+
+    &.primary {
+        background: $tag-primary;
+    }
+
+    &.warning {
+        background: $tag-warning;
+    }
+
+    &.danger {
+        background: $tag-danger;
+    }
+
+    &.success {
+        background: $tag-success;
+    }
+
+    &.default {
+        background: $tag-default;
+    }
+}
