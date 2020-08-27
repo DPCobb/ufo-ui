@@ -15,7 +15,6 @@ export default class UFOBreadcrumb extends HTMLElement {
         crumbs.forEach(c => {
             let link = document.createElement('a')
             link.setAttribute('href', c.link)
-            link.setAttribute('slot', 'link')
             link.textContent = c.text
             if (c.active) {
                 link.classList.add('active')
