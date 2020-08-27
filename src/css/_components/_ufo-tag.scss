@@ -8,6 +8,10 @@ ufo-tag {
     background: $tag-default;
     border-radius: 3px;
 
+    &:hover {
+        cursor: default;
+    }
+
     &.primary {
         background: $tag-primary;
     }
