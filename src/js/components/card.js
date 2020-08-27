@@ -15,16 +15,7 @@ class UFOCardTitle extends HTMLElement {
         } = this
         const title = this.getAttribute('title')
         shadowRoot.innerHTML = `
-            <style>
-            @media screen and (max-width:600px) {
-                h2{
-                    width: 100%;
-                    word-break: break-all;
-                    font-size: 1.2rem;
-                }
-            }
-            </style>
-            <h2>${title}</h2>
+            ${title}
         `
         this.classList.add('ufo-card-title')
         this.setAttribute('tabindex', 0)
@@ -33,7 +24,7 @@ class UFOCardTitle extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {
         if (oldValue !== newValue) {
             this.shadowRoot.innerHTML = `
-                <h2>${newValue}</h2>
+                ${newValue}
             `
         }
     }
