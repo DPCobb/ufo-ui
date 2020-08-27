@@ -48,7 +48,7 @@ export default class UFOAlert extends HTMLElement {
             }
             </style>
             <p>${body}</p>
-            <ufo-icon name="close" icon-btn></ufo-icon>
+            <ufo-icon name="close" icon-btn style="filter:opacity(0.5)"></ufo-icon>
         `
 
         this.classList.add('ufo-alert')

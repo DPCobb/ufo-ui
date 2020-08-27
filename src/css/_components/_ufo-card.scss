@@ -25,6 +25,7 @@ ufo-card {
             background-position: center;
             background-size: cover;
         }
+
     }
 
     ufo-card-title {
@@ -45,6 +46,10 @@ ufo-card {
                 display: none;
             }
         }
+
+        @media screen and (max-width:600px) {
+            font-size: 1rem;
+        }
     }
 
     ufo-card-body {
@@ -52,6 +57,10 @@ ufo-card {
         box-sizing: border-box;
         width: 100%;
         font-size: 14pt;
+
+        @media screen and (max-width:600px) {
+            font-size: 1rem;
+        }
     }
 
     ufo-card-footer {

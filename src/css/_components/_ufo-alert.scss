@@ -10,6 +10,10 @@ ufo-alert {
         padding: 1.5rem 1rem;
         margin: 2rem auto;
         border-radius: $border-radius-normal;
+
+        @media screen and (max-width:800px) {
+            padding-right: 50px
+        }
     }
 
     &.success {

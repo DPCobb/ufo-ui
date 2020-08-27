@@ -15,6 +15,15 @@ class UFOCardTitle extends HTMLElement {
         } = this
         const title = this.getAttribute('title')
         shadowRoot.innerHTML = `
+            <style>
+            @media screen and (max-width:600px) {
+                h2{
+                    width: 100%;
+                    word-break: break-all;
+                    font-size: 1.2rem;
+                }
+            }
+            </style>
             <h2>${title}</h2>
         `
         this.classList.add('ufo-card-title')
@@ -120,7 +129,7 @@ export default class UFOCard extends HTMLElement {
         }
         shadowRoot.innerHTML = `
         ${img !== null ? imgDom :'' }
-        <slot></slot>
+        <slot name="title"></slot>
         <slot></slot>
         <slot></slot>
         `
