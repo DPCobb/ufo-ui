@@ -1,0 +1,25 @@
+ufo-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+
+    &.ufo-avatar {
+        position: relative;
+        z-index: 2;
+        box-shadow: 3px 6px 10px rgba(0, 0, 0, .3), inset 0 -10px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    &[large] {
+        width: 250px;
+        height: 250px;
+    }
+
+}
