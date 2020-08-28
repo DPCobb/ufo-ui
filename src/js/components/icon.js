@@ -1,35 +1,26 @@
 export default class UFOIcon extends HTMLElement {
     static get observedAttributes() {
-        ['name', 'size']
+        return ['name']
     }
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
+        this.open = false;
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
         const icon = this.getAttribute('name')
-        let size = this.getAttribute('size')
-        if (size == null) {
-            size = 16
-        }
-        shadowRoot.innerHTML = `
-            <img src="/src/icons/${icon}.svg" width="${size}px" height="${size}px"/>
-        `
         this.classList.add('ufo-icon')
+        const ic = document.createElement('img')
+        ic.setAttribute("src", `/src/icons/${icon}.svg`)
+        this.appendChild(ic)
         this.setAttribute('tabindex', 0)
+        this.open = true
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {
-            this.shadowRoot.innerHTML = `
-            <img src="/icons/${newValue}.svg"/>
-            `
+        if (oldValue !== newValue && this.open) {
+            const ic = this.querySelector('img')
+            ic.setAttribute("src", `/src/icons/${newValue}.svg`)
         }
     }
 }

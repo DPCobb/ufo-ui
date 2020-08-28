@@ -1,12 +1,7 @@
 export default class UFOTag extends HTMLElement {
-    static get observedAttributes() {
-        ["text", "type"]
-    }
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
+        this.open = false;
     }
 
     connectedCallback() {
@@ -16,18 +11,10 @@ export default class UFOTag extends HTMLElement {
         const text = this.getAttribute('text')
         const type = this.getAttribute('type')
         this.classList.add(type)
-        shadowRoot.innerHTML = `
-            ${text}
-        `
+        const tagText = document.createElement('span')
+        tagText.textContent = text
+        this.appendChild(tagText)
         this.classList.add('ufo-tag')
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (newValue != oldValue) {
-            this.shadowRoot.innerText = `
-                ${newValue}
-            `
-        }
-
+        this.open = true;
     }
 }

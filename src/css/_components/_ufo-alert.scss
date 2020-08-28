@@ -88,4 +88,17 @@ ufo-alert {
         transition: all .3s ease-in-out;
     }
 
+    [icon-btn] {
+        filter: opacity(.5);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    p {
+        display: inline-block;
+        width: 98%;
+        margin: 0;
+    }
+
 }

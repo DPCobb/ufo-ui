@@ -1,15 +1,9 @@
 export default class UFOBreadcrumb extends HTMLElement {
-    static get observedAttributes() {
-        ['trail']
-    }
     constructor() {
         super();
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
         let crumbs = this.getAttribute('trail')
         crumbs = JSON.parse(crumbs)
         crumbs.forEach(c => {
@@ -22,9 +16,5 @@ export default class UFOBreadcrumb extends HTMLElement {
             this.appendChild(link)
         })
         this.classList.add('ufo-breadcrumb')
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-
     }
 }
