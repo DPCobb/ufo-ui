@@ -9,6 +9,7 @@ import UFODrawer from './components/drawer.js'
 import UFOTag from './components/tag.js'
 import UFOAvatar from './components/avatar.js'
 import UFOBreadcrumb from './components/breadcrumb.js'
+import UFOSummary from './components/summary.js'
 
 customElements.define('ufo-icon', UFOIcon);
 customElements.define('ufo-tooltip', UFOToolTip);
@@ -21,3 +22,4 @@ customElements.define('ufo-drawer', UFODrawer);
 customElements.define('ufo-tag', UFOTag);
 customElements.define('ufo-avatar', UFOAvatar);
 customElements.define('ufo-breadcrumbs', UFOBreadcrumb);
+customElements.define('ufo-summary', UFOSummary);
