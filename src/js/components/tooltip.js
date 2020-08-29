@@ -1,48 +1,28 @@
 class UFOTipText extends HTMLElement {
-    static get observedAttributes() {
-        ['show']
-    }
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
+        this.open = false
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
-        shadowRoot.innerHTML = `
-        `
         this.classList.add('ufo-tip-text')
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {}
+        this.open = true;
     }
 }
 customElements.define('ufo-tip-text', UFOTipText);
 
 export default class UFOTip extends HTMLElement {
     static get observedAttributes() {
-        ['tip']
+        return ['tip']
     }
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
         const tip = this.getAttribute('tip')
-        shadowRoot.innerHTML = `
-            <slot name="tip"></slot>
-        `
+        const tipT = document.createElement('ufo-tip-text')
+        tipT.textContent = tip
         this.classList.add('ufo-tooltip')
         this.addEventListener('mouseenter', function () {
             this.setAttribute('show', '')
@@ -51,9 +31,12 @@ export default class UFOTip extends HTMLElement {
             this.removeAttribute('show')
         })
         this.setAttribute('tabindex', 0)
+        this.open = true
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {}
+        if (this.open && oldValue !== newValue) {
+            this.querySelector('ufo-tip-text').textContent = newValue
+        }
     }
 }

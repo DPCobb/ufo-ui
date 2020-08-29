@@ -4,6 +4,7 @@ ufo-card {
     font-size: 16pt;
     font-family: 'Rubik', sans-serif;
     color: $card-text;
+    position: relative;
 
     &.ufo-card {
         padding: 0;
@@ -19,13 +20,17 @@ ufo-card {
             color: $card-text-dark !important;
         }
 
-        .img {
-            height: 300px;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
-        }
+    }
 
+    ufo-card-image .img {
+        height: 300px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+
+        @media screen and (max-width:600px) {
+            height: 200px;
+        }
     }
 
     ufo-card-title {

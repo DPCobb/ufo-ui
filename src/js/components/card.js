@@ -1,32 +1,16 @@
 class UFOCardTitle extends HTMLElement {
-    static get observedAttributes() {
-        ['title']
-    }
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
+        this.open = false
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
-        const title = this.getAttribute('title')
-        shadowRoot.innerHTML = `
-            ${title}
-        `
+        const titleBody = this.getAttribute('title')
+        const title = document.createElement('h2')
+        title.textContent = titleBody
         this.classList.add('ufo-card-title')
+        this.appendChild(title)
         this.setAttribute('tabindex', 0)
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {
-            this.shadowRoot.innerHTML = `
-                ${newValue}
-            `
-        }
     }
 }
 customElements.define('ufo-card-title', UFOCardTitle);
@@ -34,28 +18,10 @@ customElements.define('ufo-card-title', UFOCardTitle);
 class UFOCardBody extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
-        shadowRoot.innerHTML = `
-            <slot></slot>
-        `
         this.classList.add('ufo-card-body')
-        this.setAttribute('tabindex', 0)
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {
-            this.shadowRoot.innerHTML = `
-                <slot></slot>
-            `
-        }
     }
 }
 customElements.define('ufo-card-body', UFOCardBody);
@@ -63,72 +29,38 @@ customElements.define('ufo-card-body', UFOCardBody);
 class UFOCardFooter extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
-        shadowRoot.innerHTML = `
-            <slot></slot>
-        `
         this.classList.add('ufo-card-footer')
-        this.setAttribute('tabindex', 0)
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (oldValue !== newValue) {
-            this.shadowRoot.innerHTML = `
-                <slot></slot>
-            `
-        }
     }
 }
 customElements.define('ufo-card-footer', UFOCardFooter);
 
-export default class UFOCard extends HTMLElement {
-    /*static get observedAttributes() {
-        ['text']
-    }*/
+class UFOCardImage extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
     }
 
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
-        let imgDom, img = null;
         if (this.getAttribute('img')) {
-            img = this.getAttribute('img')
-            imgDom = `
-            <style>
-            .img {
-                height: 300px;
-                width: 100%;
-                background-position: center;
-                background-size: cover;
-            }
-            </style>
-            <div class="img" style='background-image:url("${img}")'></div>`
+            const img = this.getAttribute('img')
+            const imgW = document.createElement('div')
+            imgW.setAttribute('class', 'img')
+            imgW.setAttribute('style', `background-image:url("${img}")`)
+            this.appendChild(imgW)
         }
-        shadowRoot.innerHTML = `
-        ${img !== null ? imgDom :'' }
-        <slot name="title"></slot>
-        <slot></slot>
-        <slot></slot>
-        `
-        this.classList.add('ufo-card')
-        this.setAttribute('tabindex', 0)
+        this.classList.add('ufo-card-image')
+    }
+}
+customElements.define('ufo-card-image', UFOCardImage);
+
+export default class UFOCard extends HTMLElement {
+    constructor() {
+        super();
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
-
+    connectedCallback() {
+        this.classList.add('ufo-card')
     }
 }

@@ -1,26 +1,24 @@
 export default class UFOPill extends HTMLElement {
     static get observedAttributes() {
-        ['text', 'type']
+        return ['text', 'type']
     }
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open'
-        });
+        this.open = false
     }
 
     darkMode() {
         return this.hasAttribute('dark')
     }
 
+    change(name, value) {
+        this.setAttribute(name, value)
+    }
+
     connectedCallback() {
-        const {
-            shadowRoot
-        } = this
         const body = this.getAttribute('text');
         const type = this.getAttribute('type');
-        shadowRoot.innerHTML = `${body}`
-
+        this.textContent = body
         this.classList.add('ufo-pill')
         if (this.hasAttribute('dark')) {
             this.dark == true;
@@ -31,15 +29,30 @@ export default class UFOPill extends HTMLElement {
             this.classList.add(type + '--dark')
         }
         this.setAttribute('tabindex', 0)
+        this.open = true
+    }
+
+    adjustPill(name, value, old, dark) {
+        if (dark == false) {
+            name == 'text' ? this.textContent = value : null;
+            if (name == "type") {
+                this.classList.remove(old)
+                this.classList.add(value)
+            }
+        } else {
+            name == 'text' ? this.textContent = value : null;
+            if (name == "type") {
+                this.classList.remove(old + '--dark')
+                this.classList.add(value + '--dark')
+            }
+        }
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if (this.darkMode() == false) {
-            name == 'text' ? this.shadowRoot.innerHTML = newValue : null;
-            name == 'type' ? this.classList.remove(oldValue).add(newValue) : null;
-        } else {
-            name == 'text' ? this.shadowRoot.innerHTML = newValue : null;
-            name == 'type' ? this.classList.remove(oldValue + '--dark').add(newValue + '--dark') : null;
+        if (this.open) {
+            if (newValue != oldValue) {
+                this.adjustPill(name, newValue, oldValue, this.darkMode())
+            }
         }
     }
 }
