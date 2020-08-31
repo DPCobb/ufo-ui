@@ -1,0 +1,141 @@
+ufo-icon-bar {
+    position: fixed;
+    display: flex;
+    font-size: 16pt;
+    box-sizing: border-box;
+
+    &.top {
+        width: auto;
+        height: 45px;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.bottom {
+        width: auto;
+        height: 45px;
+        bottom: 0;
+        left: 50%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.left {
+        width: 55px;
+        height: auto;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.right {
+        width: 55px;
+        height: auto;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ufo-icon-bar-wrapper {
+        box-sizing: border-box;
+        padding: 5px 15px;
+        box-shadow: $icon-bar-box-shadow;
+        display: flex;
+        background: $icon-bar-bg;
+        color: $icon-bar-text;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        ufo-icon,
+        ufo-icon-button {
+            color: $icon-bar-text;
+            transition: all .3s ease-in-out;
+            font-size: 16pt;
+        }
+
+        ufo-icon:hover,
+        ufo-icon-button:hover {
+            color: $icon-bar-icons-hover;
+            cursor: pointer;
+        }
+
+        &.top {
+            width: auto;
+            height: 45px;
+            border-radius: 0 0 5px 5px;
+
+            ufo-icon,
+            ufo-icon-button {
+                margin-right: 5px;
+            }
+
+            ufo-icon:last-child,
+            ufo-icon-button:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &.bottom {
+            width: auto;
+            height: 45px;
+            border-radius: 5px 5px 0 0;
+
+            ufo-icon,
+            ufo-icon-button {
+                margin-right: 5px;
+            }
+
+            ufo-icon:last-child,
+            ufo-icon-button:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &.left {
+            width: 55px;
+            height: auto;
+            border-radius: 0 5px 5px 0;
+            flex-direction: column;
+
+            ufo-icon,
+            ufo-icon-button {
+                width: auto;
+                text-align: center;
+                margin: 0 auto 10px auto;
+            }
+
+            ufo-icon:last-child,
+            ufo-icon-button:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.right {
+            width: 55px;
+            height: auto;
+            border-radius: 5px 0 0 5px;
+            flex-direction: column;
+
+            ufo-icon,
+            ufo-icon-button {
+                width: auto;
+                text-align: center;
+                margin: 0 auto 10px auto;
+            }
+
+            ufo-icon:last-child,
+            ufo-icon-button:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

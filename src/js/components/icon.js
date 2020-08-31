@@ -1,6 +1,6 @@
 export default class UFOIcon extends HTMLElement {
 	static get observedAttributes() {
-		return ['name',]
+		return ['icon',]
 	}
 	constructor() {
 		super();
@@ -8,7 +8,7 @@ export default class UFOIcon extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const icon = this.getAttribute('name')
+		const icon = this.getAttribute('icon')
 
 		this.classList.add('ufo-icon')
 		const ic = document.createElement('i')
@@ -20,8 +20,8 @@ export default class UFOIcon extends HTMLElement {
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
-		if (oldValue !== newValue && this.open) {
-			const ic = this.querySelector(newValue)
+		if (newValue != oldValue && this.open) {
+			const ic = this.querySelector(oldValue)
 
 			ic.setAttribute("class", newValue)
 		}

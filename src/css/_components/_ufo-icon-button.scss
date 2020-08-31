@@ -19,16 +19,5 @@ ufo-icon-button {
             cursor: pointer;
             color: darken($button-icon, 10%);
         }
-
-        ion-icon {
-            color: $button-icon;
-            stroke: $button-icon;
-            transition: all .3s ease-in-out;
-
-            &:hover {
-                cursor: pointer;
-                color: darken($button-icon, 10%);
-            }
-        }
     }
 }
