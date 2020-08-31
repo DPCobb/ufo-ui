@@ -3,7 +3,7 @@
 
 A collection of reusable web elements for simplifying web development.
 
-Using icons from [Zondicons](http://www.zondicons.com/).
+Using icons from [Font Awesome](https://fontawesome.com/).
 
 ## Elements
 
