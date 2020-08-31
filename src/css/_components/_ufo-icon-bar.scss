@@ -4,6 +4,12 @@ ufo-icon-bar {
     font-size: 16pt;
     box-sizing: border-box;
 
+    .ufo-icon-bar {
+        @media screen and (max-width:700px) {
+            width: 100%;
+        }
+    }
+
     &.top {
         width: auto;
         height: 45px;
@@ -12,6 +18,10 @@ ufo-icon-bar {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width:700px) {
+            width: 100%;
+        }
     }
 
     &.bottom {
@@ -22,6 +32,10 @@ ufo-icon-bar {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width:700px) {
+            width: 100%;
+        }
     }
 
     &.left {
@@ -73,6 +87,12 @@ ufo-icon-bar {
             height: 45px;
             border-radius: 0 0 5px 5px;
 
+            @media screen and (max-width:700px) {
+                width: 100%;
+                justify-content: space-around;
+                border-radius: 0 0 0 0;
+            }
+
             ufo-icon,
             ufo-icon-button {
                 margin-right: 5px;
@@ -97,6 +117,12 @@ ufo-icon-bar {
             ufo-icon:last-child,
             ufo-icon-button:last-child {
                 margin-right: 0;
+            }
+
+            @media screen and (max-width:700px) {
+                width: 100%;
+                justify-content: space-around;
+                border-radius: 0 0 0 0;
             }
         }
 
