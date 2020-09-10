@@ -46,7 +46,7 @@ export default class UFOAlert extends HTMLElement {
 		aMsg.textContent = body
 		const aIcon = document.createElement('ufo-icon')
 
-		aIcon.setAttribute('name', 'fas fa-times')
+		aIcon.setAttribute('icon', 'fas fa-times')
 		aIcon.setAttribute('icon-btn', '')
 		aIcon.addEventListener('click', this.closeAlert.bind(this))
 		this.appendChild(aMsg)
