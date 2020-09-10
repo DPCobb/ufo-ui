@@ -1,73 +1,77 @@
 export default class UFOAlert extends HTMLElement {
-    static get observedAttributes() {
-        return ['msg', 'type', 'dark']
-    }
-    constructor() {
-        super();
-        this.open = false;
-    }
-    closeAlert() {
-        const states = ['success', 'error', 'warning', 'system']
-        states.forEach(s => {
-            this.classList.contains(s) ? this.classList.remove(s) : null
-        })
-        this.setAttribute('msg', '')
-        this.setAttribute('type', '')
-    }
+	static get observedAttributes() {
+		return ['msg', 'type', 'dark',]
+	}
+	constructor() {
+		super();
+		this.open = false;
+	}
+	closeAlert() {
+		const states = ['success', 'error', 'warning', 'system',]
 
-    darkMode() {
-        return this.hasAttribute('dark')
-    }
+		states.forEach(s => {
+			this.classList.contains(s) ? this.classList.remove(s) : null
+		})
+		this.setAttribute('msg', '')
+		this.setAttribute('type', '')
+	}
 
-    setMessage(msg) {
-        this.setAttribute('msg', msg)
-    }
+	darkMode() {
+		return this.hasAttribute('dark')
+	}
 
-    alertType(type) {
-        this.setAttribute('type', type)
-    }
+	setMessage(msg) {
+		this.setAttribute('msg', msg)
+	}
 
-    connectedCallback() {
-        const body = this.getAttribute('msg');
-        const type = this.getAttribute('type');
-        this.classList.add('ufo-alert')
-        if (this.hasAttribute('dark')) {
-            this.dark == true;
-        }
-        if (this.darkMode() == false) {
-            this.classList.add(type)
-        } else {
-            this.classList.add(type + '--dark')
-        }
-        const aMsg = document.createElement('p')
-        aMsg.textContent = body
-        const aIcon = document.createElement('ufo-icon')
-        aIcon.setAttribute('name', 'close')
-        aIcon.setAttribute('icon-btn', '')
-        aIcon.addEventListener('click', this.closeAlert.bind(this))
-        this.appendChild(aMsg)
-        this.appendChild(aIcon)
-        this.open = true;
-    }
+	alertType(type) {
+		this.setAttribute('type', type)
+	}
 
-    addMessage(msg) {
-        this.querySelector('p').textContent = msg
-    }
+	connectedCallback() {
+		const body = this.getAttribute('msg'),
+			type = this.getAttribute('type');
 
-    changeType(n, o) {
-        this.classList.remove(o)
-        this.classList.add(n)
-    }
+		this.classList.add('ufo-alert')
+		if (this.hasAttribute('dark')) {
+			this.dark == true;
+		}
+		if (this.darkMode() == false) {
+			this.classList.add(type)
+		} else {
+			this.classList.add(type + '--dark')
+		}
+		const aMsg = document.createElement('p')
 
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (newValue != oldValue && this.open == true) {
-            if (this.darkMode() == false) {
-                name == 'msg' ? this.addMessage(newValue) : null;
-                name == 'type' ? this.changeType(newValue, oldValue) : null;
-            } else {
-                name == 'msg' ? this.addMessage(newValue) : null;
-                name == 'type' ? this.changeType(newValue + '--dark', oldValue + '--dark') : null;
-            }
-        }
-    }
+		aMsg.textContent = body
+		const aIcon = document.createElement('ufo-icon')
+
+		aIcon.setAttribute('name', 'fas fa-times')
+		aIcon.setAttribute('icon-btn', '')
+		aIcon.addEventListener('click', this.closeAlert.bind(this))
+		this.appendChild(aMsg)
+		this.appendChild(aIcon)
+		this.open = true;
+	}
+
+	addMessage(msg) {
+		this.querySelector('p').textContent = msg
+	}
+
+	changeType(n, o) {
+		this.classList.remove(o)
+		this.classList.add(n)
+	}
+
+	attributeChangedCallback(name, oldValue, newValue) {
+		if (newValue != oldValue && this.open == true) {
+			if (this.darkMode() == false) {
+				name == 'msg' ? this.addMessage(newValue) : null;
+				name == 'type' ? this.changeType(newValue, oldValue) : null;
+			} else {
+				name == 'msg' ? this.addMessage(newValue) : null;
+				name == 'type' ? this.changeType(newValue + '--dark', oldValue + '--dark') : null;
+			}
+		}
+	}
 }
