@@ -1,7 +1,7 @@
 ufo-alert {
     font-size: 14pt;
     display: none;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     position: relative;
 
     &.ufo-alert {
@@ -11,8 +11,21 @@ ufo-alert {
         margin: 2rem auto;
         border-radius: $border-radius-normal;
 
-        @media screen and (max-width:800px) {
-            padding-right: 50px
+        @media screen and (max-width: 800px) {
+            padding-right: 50px;
+        }
+        ufo-icon {
+            filter: opacity(0.5);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            display: inline-block;
+            width: 98%;
+            margin: 0;
         }
     }
 
@@ -22,7 +35,7 @@ ufo-alert {
         color: darken($green, 10%);
         border: 1px solid $green-light;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($green-opacity, 2%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.success--dark {
@@ -31,7 +44,7 @@ ufo-alert {
         color: $white;
         border: 1px solid $green-dark;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($green, 10%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.error {
@@ -40,7 +53,7 @@ ufo-alert {
         color: darken($red, 10%);
         border: 1px solid $red-light;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($red-opacity, 2%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.error--dark {
@@ -49,7 +62,7 @@ ufo-alert {
         color: $white;
         border: 1px solid $red-dark;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($red, 10%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.warning {
@@ -58,7 +71,7 @@ ufo-alert {
         color: darken($yellow, 10%);
         border: 1px solid $yellow-light;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($yellow-opacity, 2%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.warning--dark {
@@ -67,7 +80,7 @@ ufo-alert {
         color: $white;
         border: 1px solid $yellow-dark;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($yellow, 10%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.system {
@@ -76,7 +89,7 @@ ufo-alert {
         color: darken($blue, 10%);
         border: 1px solid $blue-light;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($blue-opacity, 2%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     &.system--dark {
@@ -85,20 +98,6 @@ ufo-alert {
         color: $white;
         border: 1px solid $blue-dark;
         box-shadow: $shadow-subtle-light-bg, inset 5px -10px 30px darken($blue, 10%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
-
-    [icon-btn] {
-        filter: opacity(.5);
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    p {
-        display: inline-block;
-        width: 98%;
-        margin: 0;
-    }
-
 }

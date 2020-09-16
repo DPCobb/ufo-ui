@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
-@import '_components/_variables.scss';
-@import '_components/_animations.scss';
-@import '_components/_ufo-icon.scss';
-@import '_components/_ufo-tooltip.scss';
-@import '_components/_ufo-grid-equals.scss';
-@import '_components/_ufo-alert.scss';
-@import '_components/_ufo-button.scss';
-@import '_components/_ufo-pill.scss';
-@import '_components/_ufo-card.scss';
-@import '_components/_ufo-drawer.scss';
-@import '_components/_ufo-tag.scss';
-@import '_components/_ufo-avatar.scss';
-@import '_components/_ufo-breadcrumb.scss';
-@import '_components/_ufo-summary.scss';
-@import '_components/_ufo-icon-button.scss';
-@import '_components/_ufo-icon-bar.scss';
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap");
+@import "_components/_variables.scss";
+@import "_components/_animations.scss";
+@import "_components/_ufo-icon.scss";
+@import "_components/_ufo-tooltip.scss";
+@import "_components/_ufo-grid-equals.scss";
+@import "_components/_ufo-alert.scss";
+@import "_components/_ufo-button.scss";
+@import "_components/_ufo-pill.scss";
+@import "_components/_ufo-card.scss";
+@import "_components/_ufo-drawer.scss";
+@import "_components/_ufo-tag.scss";
+@import "_components/_ufo-avatar.scss";
+@import "_components/_ufo-breadcrumb.scss";
+@import "_components/_ufo-summary.scss";
+@import "_components/_ufo-icon-button.scss";
+@import "_components/_ufo-icon-bar.scss";
 
 *[pulse] {
-    animation: ufo-pulse .75s ease-in-out;
+    animation: ufo-pulse 0.75s ease-in-out;
 }
 
 *[pop] {
